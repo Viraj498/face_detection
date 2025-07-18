@@ -27,9 +27,8 @@ def analyze():
         return f"Error : {str(e)}"
     
     return render_template('result.html',
-                       emotion=result[0]['dominant_emotion'],
-                       all_emotions=result[0]['emotion'],
-                       image_path=file.filename)
+                           emotion=result[0]['dominant_emotion'],
+                           image_path=file.filename)
 
 
 if __name__ == '__main__':
