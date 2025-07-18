@@ -4,31 +4,30 @@ import os
 import cv2
 
 app = Flask(__name__)
-UPLOAD_FOLDER = 'uploads'
+UPLOAD_FOLDER = os.path.join('static', 'uploads')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/analyze',methods = ['POST'])
+
+@app.route('/analyze', methods=['POST'])
 def analyze():
     if 'image' not in request.files:
-        return "No File Found", 400
+        return "No file uploaded", 400
+
     file = request.files['image']
+    if file.filename == '':
+        return "No selected file", 400
+
     file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
     file.save(file_path)
-    
-    try:
-        result = DeepFace.analyze(file_path, actions = ['emotion'], enforce_detection=False)
-        emotion = result[0]['emotion']
-        
-    except Exception as e:
-        return f"Error : {str(e)}"
-    
-    return render_template('result.html',
-                           emotion=result[0]['dominant_emotion'],
-                           image_path=file.filename)
+
+    result = DeepFace.analyze(img_path=file_path, actions=['emotion'], enforce_detection=False)
+    emotion = result[0]['dominant_emotion']
+
+    return render_template('result.html', emotion=emotion, image_path=file.filename)
 
 
 if __name__ == '__main__':
