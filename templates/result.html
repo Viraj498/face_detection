@@ -4,8 +4,14 @@
     <title>Emotion Result</title>
 </head>
 <body>
-    <h2>Emotions Dectected : {{emotion}} </h2>
-    <img src = "{{url_for('static', filename='../uploads/' +image_path)}}" width= '3300'>
+    <h2>Detected Emotion: {{ emotion | capitalize }}</h2>
+
+<h3>All Emotions Confidence:</h3>
+<ul>
+  {% for key, value in all_emotions.items() %}
+    <li>{{ key.capitalize() }}: {{ '%.2f' % value }}%</li>
+  {% endfor %}
+</ul>
 
 </body>
 </html>
