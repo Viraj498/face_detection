@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Emotions Detection</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    </head>
+    
+    <body>
+    <h1>Upload an image to detect Emotions<h1>
+
+        <form action="/analyze" method="post" enctype="multipart/form-data">
+            <input type='file' name='image' accept='image/*' required> <br><br><br>
+            <button type='submit'>Detect</button>
+        </form>
+
+
+    </body>
+
+</html>
