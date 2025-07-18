@@ -26,7 +26,7 @@ def analyze():
     except Exception as e:
         return f"Error : {str(e)}"
     
-    return render_template('result,html',emotion=emotion, image_path = file.filename)
+    return render_template('result.html',emotion=emotion, image_path = file.filename)
 
 if __name__ == '__main__':
     app.run(debug = True)
