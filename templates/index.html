@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Emotions Detection</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    </head>
-    
-    <body>
-    <h1>Upload an image to detect Emotions<h1>
-
-        <form action="/analyze" method="post" enctype="multipart/form-data">
-            <input type='file' name='image' accept='image/*' required> <br><br><br>
-            <button type='submit'>Detect</button>
-        </form>
-
-
-    </body>
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Face Emotion Detector</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>😄 Face Emotion Detector</h1>
+      <p>Select an image with a clear face to analyze emotion.</p>
+      <form action="/analyze" method="post" enctype="multipart/form-data">
+        <label class="custom-file-upload">
+          <input type="file" name="image" accept="image/*" required>
+          📷 Choose Image
+        </label>
+        <button type="submit">🔍 Detect Emotion</button>
+      </form>
+    </div>
+  </div>
+</body>
 </html>
