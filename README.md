@@ -3,7 +3,7 @@
 This is a simple and effective web-based emotion detection system that uses **DeepFace**, an open-source face recognition and facial attribute analysis framework. Users can upload a photo, and the app will analyze and display the **dominant emotion** detected in the face.
 
 ---
-# Author - Viraj Developer
+# Author - Viraj Devkar
 ## 🔍 About the Project
 
 This project demonstrates how to integrate Deep Learning into a Flask web app. It uses **DeepFace** to detect and classify human emotions based on facial expressions in images. Ideal for beginners interested in AI, face analysis, or web app development.
