@@ -23,7 +23,7 @@ This project demonstrates how to integrate Deep Learning into a Flask web app. I
 
 ## 📁 Project Structure :
 
-emotion-detection-app/
+face_detection/
 ├── app.py # Main Flask application
 ├── templates/
 │ ├── index.html # Image upload interface
@@ -37,8 +37,8 @@ emotion-detection-app/
 ## ⚙️ Setup Instructions
 
 ## Clone the Repository
-git clone https://github.com/yourusername/emotion-detection-app.git
-cd emotion-detection-app
+git clone https://github.com/yourusername/face_detection.git
+cd face_detection
 
 ## Install Dependencies
 pip install -r requirements.txt
