@@ -34,9 +34,21 @@ emotion-detection-app/
 ├── requirements.txt # Python dependencies
 └── README.md # Project documentation
 
+## ⚙️ Setup Instructions
 
-### Install via pip
+## Clone the Repository
+git clone https://github.com/yourusername/emotion-detection-app.git
+cd emotion-detection-app
 
-```bash
+## Install Dependencies
 pip install -r requirements.txt
+Create Upload Folder (if not auto-created)
 
+## Create Upload Folder (if not auto-created)
+mkdir uploads
+
+## Run the Flask App
+python app.py
+
+## Visit in Browser
+http://127.0.0.1:5000
